@@ -23,6 +23,7 @@ export const Auth = () => {
     const signInWithGoogle = async () => {
         try {
             await signInWithPopup(auth, googleProvider);
+            alert(`User ${auth?.currentUser?.displayName} signed in successfully`)
         } catch (error) {
             console.error(error);
         }
